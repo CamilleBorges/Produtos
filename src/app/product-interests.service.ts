@@ -36,7 +36,7 @@ export class ProductInterestsService {
   }
 
   update(productInterest: ProductInterest){
-    let url: string = this.baseUrl + "/" + productInterest.product_id + "/interesses/" + productInterest.product_id;
+    let url: string = this.baseUrl + "/" + productInterest.product_id + "/interesses/" + productInterest.id;
     return this.http.put<any>(url, productInterest, { headers: this.headers });
   }
 
